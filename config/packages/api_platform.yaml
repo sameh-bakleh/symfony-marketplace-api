@@ -1,0 +1,13 @@
+api_platform:
+    title: Marketplace Platform API
+    description: 'API Platform (JSON-LD + OpenAPI) layer for catalog reads. REST endpoints under /api remain the primary integration surface for auth, cart checkout, and orders.'
+    version: 1.0.0
+    enable_swagger_ui: true
+    enable_re_doc: false
+    swagger:
+        versions: [3]
+    graphql: false
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']

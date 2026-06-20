@@ -1,0 +1,16 @@
+parameters:
+    env(DEFAULT_URI): 'http://localhost:8080'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DataFixtures/'
+
+    App\DataFixtures\:
+        resource: '../src/DataFixtures/'
+        tags: ['doctrine.fixture.orm']

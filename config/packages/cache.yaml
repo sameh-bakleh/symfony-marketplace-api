@@ -1,0 +1,11 @@
+framework:
+    cache:
+        prefix_seed: marketplace_platform_api
+        app: cache.adapter.redis_tag_aware
+        default_redis_provider: '%env(REDIS_DSN)%'
+
+when@test:
+    framework:
+        cache:
+            app: cache.adapter.filesystem
+            default_redis_provider: null

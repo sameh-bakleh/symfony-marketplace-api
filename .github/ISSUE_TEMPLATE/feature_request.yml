@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an enhancement within project scope
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem you want solved. Features should fit a portfolio-grade Symfony marketplace API.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What is missing or painful today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: API shape, service layer change, or docs improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional — other approaches you thought about
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not require inventing unimplemented production claims in the README
+          required: true
+        - label: I am willing to add or update functional tests if this is implemented
+          required: false

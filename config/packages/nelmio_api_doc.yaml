@@ -1,0 +1,23 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Symfony Marketplace API (REST)
+            description: |
+                Custom REST controllers under `/api` with JWT bearer authentication.
+
+                - **Login / refresh:** handled by Symfony Security firewalls (see Authentication tag).
+                - **Public reads:** `GET /api/categories`, `GET /api/products` (and slug variant).
+                - **Catalog (Hydra):** API Platform read surface at `/api/platform` — see `/api/platform/docs`.
+
+                Full endpoint table: [docs/API.md](../docs/API.md)
+            version: 1.0.0
+        components:
+            securitySchemes:
+                bearerAuth:
+                    type: http
+                    scheme: bearer
+                    bearerFormat: JWT
+    areas:
+        default:
+            path_patterns:
+                - ^/api(?!/doc)

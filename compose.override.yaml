@@ -1,0 +1,3 @@
+# Optional local overrides (`docker compose` merges this file automatically).
+# Example: bind extra ports or mount host-only paths.
+services: {}
