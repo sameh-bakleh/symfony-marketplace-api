@@ -45,6 +45,16 @@ sequenceDiagram
 
 Login and refresh are handled entirely by Symfony Security — see stub routes in `AuthTokenController` (documented for OpenAPI only).
 
+## Demo accounts (fixtures)
+
+After `doctrine:fixtures:load`, use these **local-only** credentials (password for all: `DemoPass2026!`):
+
+| Email | Role |
+|-------|------|
+| `customer@demo.marketplace` | Customer — browse, wishlist, checkout |
+| `seller@demo.marketplace` | Seller — catalog management |
+| `admin@demo.marketplace` | Admin |
+
 ## Token lifecycle
 
 ### 1. Register
@@ -54,9 +64,9 @@ POST /api/auth/register
 Content-Type: application/json
 
 {
-  "email": "buyer@example.com",
-  "password": "password123",
-  "displayName": "Buyer",
+  "email": "customer@demo.marketplace",
+  "password": "DemoPass2026!",
+  "displayName": "Demo Customer",
   "role": "customer"
 }
 ```
@@ -69,7 +79,7 @@ Content-Type: application/json
 POST /api/auth/login
 Content-Type: application/json
 
-{ "email": "buyer@example.com", "password": "password123" }
+{ "email": "customer@demo.marketplace", "password": "DemoPass2026!" }
 ```
 
 **Response (200):**

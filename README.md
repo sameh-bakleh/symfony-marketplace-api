@@ -7,6 +7,11 @@
 [![Symfony 7.4](https://img.shields.io/badge/Symfony-7.4-000000?logo=symfony)](https://symfony.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+| | |
+|---|---|
+| **Repo** | [`symfony-marketplace-api`](https://github.com/sameh-bakleh/symfony-marketplace-api) |
+| **Stack** | Symfony 7 · PHP 8.3 · Doctrine · JWT · Redis · Messenger · Docker · OpenAPI |
+
 ---
 
 ## At a glance
